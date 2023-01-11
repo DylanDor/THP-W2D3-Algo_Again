@@ -16,3 +16,22 @@ class Comparator{
 }
 
 const comparator = new Comparator;
+
+function programm(arr) {
+  let buildingCount = 0
+  for( let i = 0; i < arr.length; i++){
+    let temp = true
+    for(let j = i+1; j < arr.length; j++){
+      comparator.number++
+      if(arr[i] < arr[j]){
+        temp = false
+      }
+    }
+    if(temp){
+      buildingCount++
+    }
+  }
+  console.log(`Numbers of buildings can see sunset : ${buildingCount}. Numbers of comparisons : ${comparator.number}`)
+}
+
+programm(data)
